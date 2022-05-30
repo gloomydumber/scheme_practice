@@ -3,14 +3,14 @@
 ; as the first).
 ; a. (replicateTail 3 5) ➔ (5 5 5)
 
-(define (replicateTail n i)
-  (replicateRec (list i) i n)) ; list element repeating count
+(define (replicateTail n e)
+  (replicateRec (list e) e n)) ; list / element / repeating count
 
-(define (replicateRec l k n)
+(define (replicateRec l e n)
     (if (= n 1)
       l
       (let ((m (- n 1)))
-     (replicateRec (append l (list k)) k m))))
+     (replicateRec (append l (list e)) e m))))
  
 (replicateTail 4 2)
 (replicateTail 3 2)
